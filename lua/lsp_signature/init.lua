@@ -383,7 +383,7 @@ local signature_handler = function(err, result, ctx, config)
     helper.remove_doc(result)
   end
 
-  if _LSP_SIG_CFG.hint_enable == true then
+  if _LSP_SIG_CFG.hint_enable == true and insert_mode then
     if _LSP_SIG_CFG.floating_window == false then
       virtual_hint(hint, 0)
     end
